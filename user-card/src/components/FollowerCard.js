@@ -7,10 +7,10 @@ function FollowerCard(props) {
     return (
         <Div>
             <header>
-            Username: {props.details.login}
+                Username: {props.details.login}
             </header>
             <img src={props.details.avatar_url} alt="user image" />
-            <a href = {props.details.url} target="_blank">Github</a>
+            <a href={props.details.url} target="_blank">Github</a>
         </Div>
     )
 }

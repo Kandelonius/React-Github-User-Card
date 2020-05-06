@@ -16,29 +16,29 @@ class App extends React.Component {
     };
   }
 
-  // componentDidMount() {
-  //   console.log("cDM");
-  //   axios
-  //     .get(url)
-  //     .then(res => {
-  //       console.log("ouch");
-  //       this.setState({ gitUser: res.data });
-  //       axios
-  //         .get(`${url}/followers`)
-  //         .then(response => {
-  //           console.log("ouch 2");
-  //           // console.log("followers ",response.data);
-  //           this.setState({ gitFollowers: response.data });
-  //         })
-  //         .catch(err =>
-  //           console.log(err)
-  //         );
-  //       // console.log(res);
-  //     })
-  //     .catch(err =>
-  //       console.log(err)
-  //     );
-  // }
+  componentDidMount() {
+    console.log("cDM");
+    axios
+      .get(url)
+      .then(res => {
+        console.log("ouch");
+        this.setState({ gitUser: res.data });
+        axios
+          .get(`${url}/followers`)
+          .then(response => {
+            console.log("ouch 2");
+            // console.log("followers ",response.data);
+            this.setState({ gitFollowers: response.data });
+          })
+          .catch(err =>
+            console.log(err)
+          );
+        // console.log(res);
+      })
+      .catch(err =>
+        console.log(err)
+      );
+  }
 
   // componentDidUpdate(prevProps, prevState) {
   //     console.log("cDU");

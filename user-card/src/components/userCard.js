@@ -7,15 +7,19 @@ function UserCard(props) {
     return (
         <Div>
             <header>
-                {props.information.name}
+                <h1>
+                    {props.information.name}
+                </h1>
             </header>
             <img src={props.information.avatar_url} alt="user" />
-            <p>Username: {props.information.login}</p>
-            <p>Bio: {props.information.bio}</p>
-            <p>Repositories: {props.information.public_repos}</p>
-            <p>Followers: {props.information.followers}</p>
-            <p>Following: {props.information.following}</p>
-            <a href = {props.information.url} target="_blank">Github</a>
+            <div className="infoDiv">
+                <h3>Username: {props.information.login}</h3>
+                <h3>Bio: {props.information.bio}</h3>
+                <h3>Repositories: {props.information.public_repos}</h3>
+                <h3>Followers: {props.information.followers}</h3>
+                <h3>Following: {props.information.following}</h3>
+            </div>
+            <a href={props.information.url} target="_blank">Github</a>
         </Div>
     )
 }
