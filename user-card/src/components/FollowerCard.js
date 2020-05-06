@@ -1,16 +1,17 @@
 import React from "react";
+import Div from './FollowerStyles.jsx';
 
 function FollowerCard(props) {
-    console.log('props is ',props);
-    // const quickRef = "props.information"
+    // console.log('follower props is ',props);
+    // const quickRef = "props.details"
     return (
-        <div>
+        <Div>
             <header>
-            Username: {props.information.login}
+            Username: {props.details.login}
             </header>
-            <img src={props.information.avatar_url} alt="user image" />
-            <a href = {props.information.url} target="_blank">Github</a>
-        </div>
+            <img src={props.details.avatar_url} alt="user image" />
+            <a href = {props.details.url} target="_blank">Github</a>
+        </Div>
     )
 }
 
